@@ -13,12 +13,16 @@ import javax.persistence.*;
 @Setter
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Table(name = "tb_account")
-public class Account {
+@Table(name = "tb_client")
+public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String login;
-    String password;
+    String name;
+    String email;
+    String phone;
+    @OneToOne
+    @JoinColumn(name = "account_id", referencedColumnName = "id")
+    Account accountId;
 
 }

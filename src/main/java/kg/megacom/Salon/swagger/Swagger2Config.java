@@ -23,6 +23,8 @@ public class Swagger2Config {
     public static final String Work="Рабочие дни";
     public static final String Booking="Записи";
     public static final String Acc="Аккаунт";
+    public static final String Email="Почта";
+
 
 
 
@@ -40,7 +42,8 @@ public class Swagger2Config {
                 .tags(new Tag(Salon, ""))
                 .tags(new Tag(Work, ""))
                 .tags(new Tag(Acc, ""))
-                .tags(new Tag(Booking, ""));
+                .tags(new Tag(Booking, ""))
+                .tags(new Tag(Email, ""));
 
     }
 

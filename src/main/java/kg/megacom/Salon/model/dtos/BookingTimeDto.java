@@ -1,5 +1,6 @@
 package kg.megacom.Salon.model.dtos;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import kg.megacom.Salon.model.Client;
 import kg.megacom.Salon.model.WorkDays;
 import kg.megacom.Salon.model.enums.Status;
@@ -18,7 +19,9 @@ public class BookingTimeDto {
     Long id;
     Date startDate;
     Date endDate;
+    @JsonIgnore
     Date addDate;
+    @JsonIgnore
     Date updateDate;
     Status bookingStatus;
     List<WorkDaysDto> workDaysId;
